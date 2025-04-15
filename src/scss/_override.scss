@@ -1,0 +1,145 @@
+html {
+    .bg-success {
+        color: white !important;
+    }
+
+    .bg-primary {
+        color: $white !important;
+    }
+
+    .bg-secondary {
+        color: $white !important;
+    }
+
+    .bg-warning {
+        color: $white !important;
+    }
+    .bg-info {
+        color: $white !important;
+    } 
+    .bg-success {
+        color: $white !important;
+    }
+    .bg-error {
+        color: $white !important;
+    }
+    .bg-lightprimary-100{
+        background-color: rgb(var(--v-theme-lightprimary),0.4) !important;
+    }
+}
+
+.round-40{
+    height: 40px;
+    width: 40px;
+}
+
+.border,
+.v-divider {
+    border-color: rgba(var(--v-border-color), 1) !important;
+}
+
+
+.avtar-border {
+    border: 2px solid rgb(var(--v-theme-surface)) !important;
+}
+
+.v-dialog{
+    &.dialog-mw{
+        max-width: 800px;
+    }
+}
+
+.round-56 {
+    height: 56px;
+    width: 56px;
+}
+.round-48 {
+    height: 48px;
+    width: 48px;
+}
+
+.lh-0 {
+    line-height: 0 !important;
+}
+
+.lh-28 {
+    line-height: 28px !important;
+}
+
+.lh-32 {
+    line-height: 32px !important;
+}
+
+.space-p-96 {
+    padding: 96px 0 !important;
+
+}
+
+.ps-96 {
+    padding-inline-start: 96px !important;
+}
+
+.pt-96 {
+    padding-top: 96px !important;
+}
+.end-0{
+    inset-inline-end: 0;
+}
+.top-0{
+    top: 0;
+}
+
+.no-scrollbar {
+    height: calc(100vh - 350px);
+}
+
+.msg-chat-height {
+    height: calc(-500px + 100vh);
+}
+
+.object-fit-cover {
+    object-fit: cover !important;
+}
+
+@media screen and (max-width:991px) {
+    .overflow-x-reposive {
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+}
+
+@media screen and (max-height:767px) {
+    .msg-chat-height {
+        height: calc(-315px + 100vh);
+    }
+}
+
+.max-h-600 {
+    max-height: 600px;
+    height: calc(100vh - 100px);
+}
+
+
+.custom-hover-primary {
+    .iconify {
+        color: rgba(var(--v-theme-textPrimary), 0.9) !important;
+    }
+
+    &:hover {
+        background-color: rgb(var(--v-theme-lightprimary));
+
+        .iconify {
+            color: rgb(var(--v-theme-primary)) !important;
+        }
+
+    }
+
+}
+
+.no-icon {
+
+    .v-input__prepend,
+    .v-input__append {
+        display: none !important;
+    }
+}

@@ -1,0 +1,278 @@
+/*This is for the logo*/
+.miniicons{
+    .miniicons-list{
+        &:nth-child(3),&:nth-child(6){
+            border-bottom: 1px solid rgb(var(--v-theme-borderColor));
+            padding-bottom: 12px;
+            margin-bottom: 3px;
+        }
+        .v-btn{
+            &:hover{
+                background-color: rgb(var(--v-theme-lightprimary));
+                color: rgb(var(--v-theme-primary)) !important;
+            }
+            &.opacity-1{
+                &:hover{
+                    background-color: rgb(var(--v-theme-lightprimary));
+                    color: white !important;
+                }
+            }
+        }
+    }
+}
+
+.leftSidebar {
+    box-shadow: none !important;
+    left: 70px;
+
+    .logo {
+        padding-left: 7px;
+    }
+
+    .mini-icon {
+        display: none;
+    }
+
+    .mini-text {
+        display: block;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: inherit;
+    }
+
+    .v-list--density-default .v-list-subheader {
+        padding-inline-start: 0 !important;
+    }
+
+}
+
+.mini-sidebar{
+    .v-main{
+        margin-left: 15px !important;
+    }
+}
+
+/*This is for the Vertical sidebar*/
+.miniscrollnavbar {
+    height: calc(100vh - 100px);
+}
+.scrollnavbar {
+    height: calc(100vh - 100px);
+
+    .userbottom {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+    }
+
+    .smallCap {
+        padding: 20px 0px 10px !important;
+        font-size: 0.875rem;
+        font-weight: 500;
+        margin-top: 24px;
+        color: rgb(var(--v-theme-textPrimary));
+
+        &:first-child {
+            margin-top: 0 !important;
+        }
+    }
+
+
+
+    /*General Menu css*/
+
+    .v-list-group__items {
+        .v-list-item {
+            min-height: 35px !important;
+            padding-inline-start: calc(12px + var(--indent-padding) / 10) !important;
+
+            .v-list-item__prepend .dot {
+                height: 6px;
+                width: 6px;
+                background-color: rgb(var(--v-theme-textSecondary));
+                border-radius: 50%;
+                margin-inline-end: 8px !important;
+            }
+
+            .v-list-item-title {
+                font-size: 14px !important;
+            }
+
+            &:hover {
+                color: rgb(var(--v-theme-primary));
+
+                .v-list-item__prepend .dot {
+                    background-color: rgb(var(--v-theme-primary));
+                }
+            }
+
+            &.v-list-item--active {
+                .v-list-item__prepend .dot {
+                    background-color: rgb(var(--v-theme-primary));
+                }
+            }
+
+        }
+    }
+
+    .v-list-group__items .v-list-item,
+    .v-list-item {
+        border-radius: $border-radius-root + 4;
+        color: rgba(var(--v-theme-textPrimary), 0.8);
+        margin: 0 0 8px;
+
+        &:hover {
+            color: rgb(var(--v-theme-primary));
+        }
+
+        .v-list-item__prepend {
+            margin-inline-end: 13px;
+        }
+
+        .v-list-item__append {
+            font-size: 15px;
+
+            .v-icon {
+                margin-inline-start: 13px;
+            }
+        }
+
+        .v-list-item-title {
+            font-size: 15px;
+
+        }
+    }
+
+    /*This is for the dropdown*/
+    .v-list {
+        color: rgb(var(--v-theme-textSecondary));
+
+        >.v-list-item.v-list-item--active,
+        .v-list-item--active>.v-list-item__overlay {
+            background: rgb(var(--v-theme-primary));
+            color: white;
+            box-shadow: 0 17px 20px -8px rgba(var(--v-theme-primary), 0.2);
+        }
+
+        >.v-list-group {
+            position: relative;
+
+            >.v-list-item--active,
+            >.v-list-item--active:hover {
+                background: rgb(var(--v-theme-primary));
+                color: white;
+                box-shadow: 0 17px 20px -8px rgba(var(--v-theme-primary), 0.2);
+            }
+
+            .v-list-group__items .v-list-item.v-list-item--active,
+            .v-list-group__items .v-list-item.v-list-item--active>.v-list-item__overlay {
+                background: transparent;
+                color: rgb(var(--v-theme-primary));
+            }
+        }
+    }
+
+
+    .sidebar-menus{
+        .v-list{
+            border-bottom: 1px solid rgb(var(--v-theme-borderColor));
+            &:last-child{
+                border-bottom:0;
+            }
+        }
+    }
+}
+
+.v-list-item--density-default:not(.v-list-item--nav).v-list-item--one-line {
+    padding-inline: 14px;
+}
+
+.v-navigation-drawer--rail {
+
+    .scrollnavbar .v-list .v-list-group__items,
+    .hide-menu {
+        opacity: 1;
+    }
+
+
+    .leftPadding {
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .mini-sidebar {
+        .logo {
+            width: 40px;
+            overflow: hidden;
+            padding-left: 0;
+        }
+
+        .leftSidebar .v-list--density-default .v-list-subheader {
+            padding-inline-start: 14px !important;
+        }
+
+        .scrollnavbar .v-list-group__items .v-list-item {
+            padding-inline-start: 20px !important;
+        }
+
+
+        .smallCap {
+            padding: 3px 16px !important;
+        }
+
+        .mini-icon {
+            display: block;
+        }
+
+        .sidebarchip.hide-menu {
+            opacity: 0;
+        }
+
+        .userbottom .hide-menu {
+            opacity: 0;
+        }
+
+        .mini-text {
+            display: none;
+        }
+
+        .v-list {
+            padding: 14px !important;
+        }
+    }
+}
+
+// scrollbar
+.ps__rail-y {
+    z-index: 9;
+}
+
+.v-navigation-drawer {
+    box-shadow: none !important;
+    border-right: 0 !important;
+}
+
+.v-menu {
+    &.mobile_popup {
+        .v-overlay__content {
+            width: 100%;
+
+        }
+
+        .v-btn.search {
+            color: rgba(var(--v-theme-textSecondary), 0.8) !important;
+        }
+    }
+}
+
+@media screen and (max-width:1199px) {
+    .leftSidebar {
+        &.v-navigation-drawer--active {
+            left: 80px !important;
+            z-index: 9999 !important;
+        }
+    }
+}

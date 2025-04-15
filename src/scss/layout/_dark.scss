@@ -1,0 +1,60 @@
+// theme : dark
+div[class*='v-theme--DARK_'] {
+    .smallCap {
+        color: rgb(var(--v-theme-textSecondary));
+    }
+
+    .elevation-10 {
+        box-shadow: none !important;
+    }
+
+    .v-field__outline {
+        --v-field-border-opacity: 0.38 !important;
+    }
+
+    #vector-map .dxm-layers path {
+        fill: #7C8FAC !important;
+    }
+
+    .svgMap-map-wrapper {
+        .svgMap-country {
+            stroke: transparent;
+            fill: #43516a !important;
+
+            &#svgMap-map-country-IN {
+                fill: rgb(var(--v-theme-primary)) !important;
+            }
+
+            &#svgMap-map-country-AF {
+                fill: rgb(var(--v-theme-error)) !important;
+            }
+
+            &#svgMap-map-country-US {
+                fill: rgb(var(--v-theme-secondary)) !important;
+            }
+        }
+
+        .svgMap-map-controls-zoom {
+            background: #43516a !important;
+
+            .svgMap-control-button.svgMap-zoom-button:before,
+            .svgMap-control-button.svgMap-zoom-in-button:after {
+                background: #9b9898 !important;
+            }
+        }
+
+        .svgMap-map-wrapper .svgMap-control-button.svgMap-zoom-button:after,
+        .svgMap-map-wrapper .svgMap-control-button.svgMap-zoom-button:before {
+            background: #9b9898 !important;
+        }
+
+    }
+
+    .dark-table {
+        background-color: rgb(var(--v-theme-light)) !important;
+    }
+
+    .authentication {
+        background-color: rgba(var(--v-theme-light)) !important;
+    }
+}

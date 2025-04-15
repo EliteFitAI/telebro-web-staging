@@ -1,0 +1,22 @@
+
+.v-text-field input {
+  font-size: 0.875rem;
+}
+.v-field__outline {
+  color: rgb(var(--v-theme-borderColor));
+  --v-field-border-opacity: 1 !important;
+}
+.input {
+  .v-field--variant-outlined {
+    background-color: rgba(0, 0, 0, 0.025);
+  }
+}
+
+input::placeholder {
+  color: rgba(var(--v-theme-textPrimary),0.6) !important;
+  opacity: 1 !important;
+}
+textarea::placeholder {
+  color: rgba(var(--v-theme-textPrimary),0.6) !important;
+  opacity: 1 !important;
+}

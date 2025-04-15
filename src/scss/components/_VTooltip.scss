@@ -1,0 +1,14 @@
+.v-tooltip{
+    .v-overlay__content{
+        border-radius: $border-radius-root + 4 !important;
+    }
+}
+
+.v-tooltip{
+    &.custom-tooltip {
+        .v-overlay__content {
+            background: rgba(var(--v-theme-secondary), 0.9);
+            color: white;
+        }
+    }
+}

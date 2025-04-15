@@ -1,0 +1,136 @@
+$sizes: (
+    'display-1': 44px,
+    'display-2': 40px,
+    'display-3': 30px,
+    'h1': 36px,
+    'h2': 30px,
+    'h3': 21px,
+    'h4': 18px,
+    'h5': 16px,
+    'h6': 14px,
+    'text-10': 10px,
+    'text-12': 12px,
+    'text-13': 13px,
+    'text-14': 14px,
+    'text-15': 15px,
+    'text-16': 16px,
+    'text-17': 17px,
+    'text-18': 18px,
+    'text-20': 20px,
+    'text-22': 22px,
+    'text-24': 24px,
+    'text-28': 28px,
+    'text-34': 34px,
+    'text-44': 44px,
+    'text-48': 48px,
+    'text-50': 50px,
+    'text-56': 56px,
+    'text-64': 64px
+);
+
+@each $pixel, $size in $sizes {
+    .#{$pixel} {
+        font-size: $size;
+        line-height: $size + 10;
+    }
+}
+
+$height: (
+    'h-10': 10px,
+    'h-30': 20px,
+    'h-55': 55px
+);
+
+@each $pixel, $size in $height {
+    .#{$pixel} {
+        height: $size;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    @each $pixel, $size in $sizes {
+        .#{$pixel} {
+            @if ($pixel == 'text-12' or $pixel == 'text-10') {
+                font-size: $size; // No change for .text-12 and .text-10
+            }
+            @if ($pixel == 'text-44' or $pixel == 'text-50' or $pixel == 'text-64') {
+                font-size: $size - 10px; // No change for .text-12 and .text-10
+            }
+           
+        }
+    }
+}
+
+
+
+.textSecondary {
+    color: rgb(var(--v-theme-textSecondary)) !important;
+}
+
+.textPrimary {
+    color: rgb(var(--v-theme-textPrimary)) !important;
+}
+
+// line height
+
+.lh-md {
+    line-height: 1.57;
+}
+
+.lh-inherit {
+    line-height: inherit;
+}
+
+.lh-zero {
+    line-height: 0;
+}
+
+.lh-normal {
+    line-height: normal;
+}
+
+
+.font-weight-semibold {
+    font-weight: 600;
+}
+
+// hover text
+.text-hover-primary {
+    color: rgb(var(--v-theme-textPrimary));
+
+    &:hover {
+        color: rgb(var(--v-theme-primary));
+    }
+}
+
+.text-hover-sky {
+    color: rgb(var(--v-theme-darkgray));
+
+    &:hover {
+        color: rgb(var(--v-theme-primary));
+    }
+}
+
+.text-hover-muted {
+    color: rgb(var(--v-theme-muted));
+
+    &:hover {
+        color: rgb(var(--v-theme-primary));
+    }
+}
+
+.link {
+    color: rgb(var(--v-theme-textSecondary));
+    text-decoration: none;
+
+    &:hover {
+        color: rgb(var(--v-theme-primary));
+    }
+}
+
+.hover-primary {
+    &:hover {
+        color: rgb(var(--v-theme-primary)) !important;
+        opacity: 1;
+    }
+}

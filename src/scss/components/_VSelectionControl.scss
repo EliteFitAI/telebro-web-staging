@@ -1,0 +1,19 @@
+// For checkbox & radios
+.v-selection-control__input > .v-icon.mdi-checkbox-blank-outline,
+.v-selection-control__input > .v-icon.mdi-radiobox-blank {
+    color: rgba(var(--v-theme-muted),0.5);
+    opacity: 1;
+}
+.v-switch .v-label, .v-checkbox .v-label,.v-selection-control .v-label{
+    font-weight: 500;
+}
+
+.v-select{
+    .v-field{
+        color: rgba(var(--v-theme-textPrimary),0.9) !important;
+        font-weight: 600 !important;
+    }
+    .v-field__input{
+        padding-top: 7px !important;
+    }
+}

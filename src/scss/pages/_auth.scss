@@ -1,0 +1,113 @@
+.auth{
+    z-index: 2;
+}
+.auth-card{
+    width: 100%;
+    max-width: 460px;
+}
+
+.min-vh-100{
+    min-height: 100vh !important;
+}
+
+.auth-divider{
+    span{
+        z-index: 1;
+    }
+    &::before{
+        position: absolute;
+        width: 100%;
+        border-top: thin solid rgb(229, 234, 239);
+        top: 50%;
+        content: "";
+        transform: translateY(50%);
+        left: 0;
+    }
+    &::after
+    {
+        position: absolute;
+        width: 100%;
+        border-top: thin solid rgb(var(--v-theme-borderColor));
+        top: 50%;
+        content: "";
+        transform: translateY(50%);
+        right: 0;
+    }   
+}
+
+
+.circle-top {
+    position: absolute;
+    top: -33%;
+    left: -14%;
+    border: 120px solid #0b2947;
+    height: 700px;
+    width: 700px;
+    display: block;
+    background: 0 0;
+    border-radius: 100%;
+    z-index: 1;
+}
+.circle-bottom {
+    img{
+    position: absolute;
+    bottom: 0;
+    right: 1%;
+    height: 450px;
+    width: 450px;
+    display: block;
+    background: 0 0;
+    z-index: 1;
+    opacity: .5;
+    }
+    
+}
+
+.auth-login {
+    max-width: 1160px !important;
+}
+.auth-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    .v-carousel__controls{
+        height: auto;
+        .v-btn{
+            margin: 0 0 !important;
+             
+            &.v-btn--active{
+                .v-btn__content{
+                    color:rgb(var(--v-theme-primary)) !important;
+                    .v-icon{
+                        opacity: 1 !important ;
+                    }
+                }
+            }
+            .v-btn__content{
+                    .v-icon{
+                        opacity: 1 !important ;
+                    }
+            }
+        }
+        
+    }
+}
+
+
+
+.h-n80 {
+    height: calc(100vh - 80px);
+}
+
+@media screen and (max-width:1280px){
+    .mh-100{
+        height: 100% !important;
+    } 
+}
+
+@media screen and (max-width:600px){
+    .mw-100{
+        width: 100%;
+        padding: 0 15px;
+    } 
+}

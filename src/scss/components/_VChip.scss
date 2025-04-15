@@ -1,0 +1,9 @@
+.v-chip{
+    &.v-chip--size-small {
+        --v-chip-size: 10px !important;
+        --v-chip-height: 25px !important;
+        font-size: 13px !important;
+        font-weight: 600;
+        padding: 0px 10px;
+    } 
+}
